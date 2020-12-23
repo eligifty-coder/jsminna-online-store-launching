@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Signup</title>
+   <link rel="stylesheet" href="./signup.css">
+</head>
+<body>
+   <div class="error">
+      
+   </div>
+   <div class="outer">
+      <div class="signup">
+         <header>
+            <h1>JsMinna</h1>
+            <div class="link">
+               <a href="signup.html" class="anchor">Sign up</a>
+            </div>
+         </header>
+         <form>
+         <div class="title">
+            <h1>Create a new account</h1>
+            <p>It's quick and easy</p>
+         </div>
+         <div class="inputs">
+            <div class=" name input">
+               <p class="required">required*</p>
+               <input type="text" class="inputdiv" placeholder="Full name" name="fname">
+            </div>
+            <div class="input email">
+               <p class="required">required*</p>
+               <input type="email" class="inputdiv" name="email" placeholder="Email">
+            </div>
+            <div class="password input">
+               <p class="required">required*</p>
+               <input type="password" class="inputdiv" name="password" placeholder="Password">
+            </div>
+            <div class="tel input">
+               <input type="tel" name="phone" placeholder="phone number" class="inputdiv">
+            </div>
+            <div class="address input">
+               <input type="text" name="address" placeholder="Address" class="inputdiv">
+            </div>
+            <div class="gender-sec">
+               <label for="gender" class="=label">Gender</label>
+               <div class="genders">
+                  <div class="gender">
+                     <input type="radio" name="gender" value="female">
+                     <h5>Female</h5>
+                  </div>
+                  <div class="gender">
+                     <input type="radio" name="gender" value="male">
+                     <h5>Male</h5>
+                  </div>
+               </div>
+            </div>
+            <p> By clicking Sign Up, you agree to our <span>Terms, Data Policy</span> and <span>Cookie Policy</span>.
+               You may recieve SMS notifications from us and can opt out any time</p>
+               <div class="btn">
+                  <button type="submit">Sign Up</button>
+                  <div class="btnCircle"><div></div></div>
+                  <p>already have an account? <a href="./login.html">Login</a></p>
+               </div>
+         </div>
+         </form>
+      </div>
+   </div>
+   <script src="./signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'Lato', sans-serif;
+}
+body {
+   background-color: rgb(235, 237, 240);
+   /* padding-bottom: 50px; */
+   height: 100vh;
+   display: grid;
+   place-items: center;
+   position: relative;
+   width: 100%;
+}
+.error{
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   left: 0;
+   top: 0;
+   background: rgb(0,0,0,.4);
+   display: grid;
+   grid-template-columns: 1fr;
+   justify-items: center;
+   align-items: start;
+   padding-top: 300px;
+   display: none;
+}
+.error div{
+   margin: 0 auto;
+}
+.error div  h1{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   right: 0;
+   text-align: right;
+   padding: 15px;
+   color: red;
+   cursor: pointer;
+}
+.error div h1:hover{
+   color: rgb(1, 150, 232);
+}
+.error div{
+   height: 200px;
+   width: 80%;
+   margin: 0 auto;
+   max-width: 500px;
+   background: #fff;
+   display: grid;
+   place-items: center;
+   font-size: 20px;
+   padding: 30px;
+   text-align: center;
+   border-radius: 10px;
+   position: absolute;
+   left: 10%;
+   top: 20%;
+}
+
+.error div p span{
+   color: red;
+}
+@media screen and (min-width:778px) {
+   .error div {
+      left: 25%;
+   }
+}
+.login{
+   width: 90%;
+   margin: 0 auto;
+   grid-template-columns: 1fr;
+   max-width: 500px;
+   display: grid;
+   row-gap: 20px;
+   place-items: center;
+   height: 440px;
+   background: #fff;
+   border-radius: 10px;
+   box-shadow: 0 3px 2px #ccc;
+   padding-top: 50px;
+   padding-bottom: 90px;
+   padding-left: 20px;
+   padding-right: 20px;
+}
+.login .input{
+   width: 100%;
+}
+.login .input input{
+   width: 100%;
+   max-width: 100%;
+   margin: 0 auto;
+   padding: 19px;
+   border-radius: 5px;
+   outline: none;
+   border: none;
+   box-shadow: 0 3px 2px #ccc;
+   border-top: 1px solid #ccc;
+   font-size: 15px;
+}
+.login .input button{
+   padding: 10px 70px;
+   font-size: 16px;
+   background: rgba(240, 178, 4);
+   border: none;
+   outline: none;
+   box-shadow: 0 3px 2px rgba(240, 178, 4);
+   color: #fff;
+   border-radius: 5px;
+   font-weight: bold;
+   cursor: pointer;
+}
+.login .input .btnCircle{
+   padding: 10px 50px !important;
+   width:90%;
+   max-width: 150px;
+   display: grid;
+   place-items: center;
+   height: 100%;
+   font-size: 16px;
+   background: rgba(240, 178, 4);
+   border: none;
+   outline: none;
+   box-shadow: 0 3px 2px rgba(240, 178, 4);
+   color: #fff;
+   border-radius: 5px;
+   font-weight: bold;
+   cursor: pointer;
+   display: none;
+}
+.login .input .btnCircle.btnCircle div {
+   width: 20px;
+   height: 20px;
+   border: 2px dashed #fff;
+   margin: 0 auto;
+   border-radius: 50%;
+   animation: wave 2s linear infinite;
+}
+@keyframes wave {
+   0% {
+      transform: rotate(0);
+   }
+
+   25% {
+      transform: rotate(45deg);
+   }
+
+   50% {
+      transform: rotate((90%));
+   }
+
+   75% {
+      transform: rotate((180deg));
+   }
+
+   100% {
+      transform: rotate(360deg);
+   }
+}
+.login .input button:hover {
+   background: rgba(240, 178, 4, .8);
+}
+.login .input input::placeholder {
+   color: rgb(144, 148, 156);
+   font-size: 18px;
+   text-transform: capitalize;
+}
+.login form{
+   width: 90%;
+   margin: 0 auto;
+   row-gap: 32px;
+   grid-template-rows: 1fr;
+   max-width: 500px;
+   display: grid;
+   padding-bottom: 40px ;
+   border-radius: 10px;
+}
+.login .underline{
+   width: 100%;
+   height: 2px;
+   border-bottom: 1px solid #ccc;
+}
+.login .signups{
+   width: 100%;
+   display: grid;
+   place-items: center;
+}
+.login .signups a{
+   text-decoration: none;
+   padding: 15px 30px;
+   font-size: 16px;
+   background: rgba(54, 164, 32);
+   border: none;
+   outline: none;
+   color: #fff;
+   border-radius: 5px;
+   font-weight: bold;
+   cursor: pointer;
+}
+.login .signups a:hover {
+   background: rgba(54, 164, 32, .8);
+}
