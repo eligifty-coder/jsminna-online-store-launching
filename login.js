@@ -17,9 +17,11 @@ loginForm.onsubmit = async function (e){
    const userEmail = user.email
    const userpassword= user.password
    console.log(userEmail, email.value)
+   btn.style.display = "none"
+   btnCircle.style.display = "grid"
    if (userEmail==email.value && userpassword==password.value){
-      btn.style.display = "none"
-      btnCircle.style.display = "grid"
+      // btn.style.display = "none"
+      // btnCircle.style.display = "grid"
       let userdata = JSON.parse(localStorage.getItem("user"))
       data.email=userdata.email
       data.password=userdata.password
@@ -69,5 +71,7 @@ loginForm.onsubmit = async function (e){
       interval = setTimeout(() => {
          error.style.display = 'none'
       }, 7000)
+      btn.style.display = "block"
+      btnCircle.style.display = "none"
    }
 }

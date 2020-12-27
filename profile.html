@@ -3,9 +3,47 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>Profile</title>
+   <link rel="stylesheet" href="./fontawesome-free-5.9.0-web//css/all.min.css">
+   <link rel="stylesheet" href="./profile.css">
 </head>
 <body>
-   profile
+   <div class="outer">
+      <div class="profile signup">
+         <header>
+            <h1>JsMinna</h1>
+            <div class="link">
+               <a href="profile.html" class="anchor"> <span></span> <i class="fa fa-user"></i> </a>
+            </div>
+         </header>
+         <form>
+            <div class="title">
+               <h1>Hey <span> Gift</span> Now you can make a suggestion to the store with the form below</h1>
+            </div>
+            <div class="inputs">
+               <div class="name input">
+                  <input type="text" placeholder="Item Name" name="name" class="inputdiv">
+               </div>
+               <div class="description input">
+                  <textarea name="description" placeholder="Item Description"class="textdiv" ></textarea>
+               </div>
+               <div class="category input">
+                  <select name="category" class="electronic inputdiv">
+                     <option value="Electronics">Electronics</option>
+                     <option value="Furniture">Furniture</option>
+                     <option value="Grocery">Grocery</option>
+                  </select>
+               </div>
+               <div class="input suggestion">
+                  <textarea name="suggestion" placeholder="Reason for suggestion" class="textdiv"></textarea>
+               </div>
+               <div class="btn input">
+                  <button type="submit">Submit Suggestion</button>
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
 </body>
+<script src="./profile.js"></script>
 </html>
