@@ -12,8 +12,6 @@ myform.onsubmit= async function(e){
    e.preventDefault()
    try{
       let data = {}
-      btn.style.display = "none"
-      btnCircle.style.display = "grid"
       if (email.value && password.value && fname.value) {
          data.fullName = fname.value
          data.email = email.value
@@ -32,7 +30,7 @@ myform.onsubmit= async function(e){
          btn.style.display = "none"
          btnCircle.style.display = "grid"
          const jsonresp = await response.json()
-         let interval;
+         let interval
          interval = setTimeout(() => {
             if (jsonresp.success) {
                let userIds = {
@@ -41,14 +39,16 @@ myform.onsubmit= async function(e){
                   password: data.password,
                   token: jsonresp.payload.token
                }
+               btn.style.display = "none"
+               btnCircle.style.display = "grid"
                localStorage.setItem("user", JSON.stringify(userIds))
                self.location = "./login.html"
             } else {
                error.style.display = 'grid'
                error.innerHTML = `<div>
-         <h1 class="close">X</h1>
-         <p>This User has been registered. Kindly Enter new details</p>
-         </div>`
+               <h1 class="close">X</h1>
+               <p>This User has been registered. Kindly Enter new details</p>
+               </div>`
                let close = document.querySelector(".close")
                close.onclick = function () {
                   error.style.display = 'none'
