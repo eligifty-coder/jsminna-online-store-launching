@@ -58,20 +58,22 @@ loginForm.onsubmit = async function (e){
          btnCircle.style.display = "none"
       },1000)
    }else{
-      error.style.display = 'grid'
-      error.innerHTML = `<div>
+      interval= setTimeout(()=>{
+         error.style.display = 'grid'
+         error.innerHTML = `<div>
          <h1 class="close">X</h1>
          <p>User not found, kindly Sign up</p>
          </div>`
-      let close = document.querySelector(".close")
-      close.onclick = function () {
-         error.style.display = 'none'
-      }
-      clearInterval(interval)
-      interval = setTimeout(() => {
-         error.style.display = 'none'
-      }, 7000)
-      btn.style.display = "block"
-      btnCircle.style.display = "none"
+         let close = document.querySelector(".close")
+         close.onclick = function () {
+            error.style.display = 'none'
+         }
+         clearInterval(interval)
+         interval = setTimeout(() => {
+            error.style.display = 'none'
+         }, 7000)
+         btn.style.display = "block"
+         btnCircle.style.display = "none"
+      },3000)
    }
 }

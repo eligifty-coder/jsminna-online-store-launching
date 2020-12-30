@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'Lato', sans-serif;
+}
+
+body {
+   background-color: rgb(235, 237, 240);
+   padding-bottom: 50px;
+   position: relative;
+   width: 100%;
+}
+.outer header {
+   height: 80px;
+   background: rgb(17, 73, 85);
+   width: 100%;
+   display: grid;
+   grid-template-columns: auto 1fr;
+   column-gap: 30px;
+   align-items: center;
+   justify-items: center;
+   padding: 0 30px;
+}
+.outer header .link {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   place-items: center;
+   column-gap: 20px;
+   justify-self: end;
+}
+.outer .suggestion{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   padding: 0 30px;
+   align-items: center;
+}
+.outer .subheader{
+   display: grid;
+   grid-template-columns: 1fr;
+   padding: 0 30px;
+   align-items: center;
+   width: 100%;
+}
+.outer .subheader h1{
+   text-align: center;
+}
+.outer .subheader h1 span{
+   color: rgba(240, 178, 4);
+}
+.outer .suggestion .single .anchor{
+   color: rgba(240, 178, 4);
+}
+.outer .suggestion .single{
+   justify-self: end;
+}
+.outer .suggestion form{
+   justify-self: start;
+   width: 250px;
+}
+.outer  .display {
+   display: grid;
+   grid-template-columns: 1fr;
+   padding: 0 30px;
+   width: 100%;
+}
+.outer .display .itemHeader {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   font-weight: 500;
+   width: 100%;
+   column-gap: 1px;
+   display: none;
+}
+.outer .display .content {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   column-gap: 1px;
+   box-shadow: 0 2px 3px #ccc;
+   padding: 20px 0;
+   margin-bottom: 5px;
+}
+.outer .display .content-sec {
+   display: grid;
+}
+
+.outer .display .content p {
+   padding:5px;
+}
+.outer .display .itemHeader h1 {
+   font-weight: 500;
+   font-size: 15px;
+   background: rgba(240, 178, 4);
+   padding: 25px 10px;
+}
+.outer .suggestion form select{
+   width: 100%;
+   padding:10px 2px;
+   color: rgb(17, 73, 85);
+   font-weight: 700;
+   outline: none;
+   border: none;
+   box-shadow: 0 3px 2px #ccc;
+}
+
+.outer .suggestion .single .anchor:hover {
+   color: rgba(240, 178, 4, .7);
+}
+
+.outer header .anchor {
+   color: rgba(240, 178, 4);
+   text-decoration: none;
+}
+
+.outer header .anchor:hover {
+   color: rgba(240, 178, 4, .7);
+}
+.outer header h1 {
+   color: rgba(240, 178, 4);
+   font-weight: 900;
+   padding: 0;
+   justify-self: start;
+}
+.outer {
+   width: 100%;
+   height: 100%;
+   display: grid;
+   grid-template-columns: 1fr;
+   row-gap: 30px;
+}

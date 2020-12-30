@@ -12,6 +12,8 @@ myform.onsubmit= async function(e){
    e.preventDefault()
    try{
       let data = {}
+         btn.style.display = "none"
+         btnCircle.style.display = "grid"
       if (email.value && password.value && fname.value) {
          data.fullName = fname.value
          data.email = email.value
@@ -27,8 +29,7 @@ myform.onsubmit= async function(e){
             body: JSON.stringify(data),
          };
          const response = await fetch("https://jsminnastore.herokuapp.com/auth/signup", options)
-         btn.style.display = "none"
-         btnCircle.style.display = "grid"
+         
          const jsonresp = await response.json()
          let interval
          interval = setTimeout(() => {
@@ -42,7 +43,7 @@ myform.onsubmit= async function(e){
                btn.style.display = "none"
                btnCircle.style.display = "grid"
                localStorage.setItem("user", JSON.stringify(userIds))
-               self.location = "./login.html"
+               self.location = "../login.html"
             } else {
                error.style.display = 'grid'
                error.innerHTML = `<div>
@@ -61,25 +62,27 @@ myform.onsubmit= async function(e){
             btn.style.display = "block"
             btnCircle.style.display = "none"
          }, 1000)
-      } else {
-         error.style.display = 'grid'
-         error.innerHTML = `<div>
-         <h1 class="close">X</h1>
-         <p>Kindly fill all <span>required *</span> fields</p>
-      </div>`
-         let close = document.querySelector(".close")
-         close.onclick = function () {
-            error.style.display = 'none'
+      } 
+      else {
+         interval= setTimeout(()=>{
             btn.style.display = "block"
             btnCircle.style.display = "none"
-         }
-         clearInterval(interval)
-         interval = setTimeout(() => {
-            error.style.display = 'none'
-         }, 10000)
-         btn.style.display = "block"
-         btnCircle.style.display = "none"
+            error.style.display = 'grid'
+            error.innerHTML = `<div>
+            <h1 class="close">X</h1>
+            <p>Kindly fill all <span>required *</span> fields</p>
+            </div>`
+            let close = document.querySelector(".close")
+            close.onclick = function () {
+               error.style.display = 'none'
+            }
+            clearInterval(interval)
+            interval = setTimeout(() => {
+               error.style.display = 'none'
+            }, 7000)
+         },3000)
       }
+
    }catch(e){
 
    }

@@ -1,25 +1,4 @@
-// const data ={
-// 	fullName:"Gift",
-// 	email:"chim@gmail.com",
-// 	mobileNumber:"07068379301",
-// 	address:"n0 66, Ajah, Lagos",
-// 	gender:"female",
-// 	password:"1234567"
-// }
-// console.log(data)
-// const options = {
-// 	method: "POST",
-// 	headers: {
-// 		"Content-Type": "application/json",
-// 	},
-// 	body: JSON.stringify(data),
-// };
-// const myfun = async ()=>{
-// 	const response = await fetch("https://jsminnastore.herokuapp.com/auth/signup", options)
-// 	const jsonresp= await response.json()
-// 	console.log(jsonresp)
-// }
-// myfun()
+
 const timer = {
 	days: 0,
 	hours: 0,
@@ -33,27 +12,34 @@ const hourPara = document.querySelector(".second .inputted")
 const minutePara = document.querySelector(".third .inputted")
 const secondPara = document.querySelector(".fourth .inputted")
 const emailInput = document.querySelector(".formdiv .email")
+const anchor = document.querySelector(".content-sec .check a")
 const form = document.querySelector(".form")
 const btn= document.querySelector(".homeBtn button")
 const btnCircle= document.querySelector(".homeBtn .circle")
-console.log(btn)
 para.innerHTML= new Date().getFullYear()
 const timecontainer = document.querySelector(".time")
+
+anchor.onclick= function(e){
+	e.preventDefault()
+	let token =JSON.parse(localStorage.getItem("user")).token
+	if(token){
+		self.location = "./suggested.html"
+	}
+}
 form.onsubmit= function(e){
 	e.preventDefault()
+	btn.style.display = "none"
+	btnCircle.style.display = "grid"
 	if(emailInput.value){
 		localStorage.setItem('uniqueEmil', emailInput.value)
-		btn.style.display="none"
-		btnCircle.style.display="grid"
 		setTimeout(()=>{
 			btn.style.display = "block"
 			btnCircle.style.display = "none"
 			self.location="./signup.html"
-		},1000)
+		},10000)
 	}else{
 		alert("kindly fill appropriately to continue")
 	}
-	console.log(localStorage)
 }
 document.addEventListener('DOMContentLoaded', timeInterval)
 function currentTimed(){

@@ -25,6 +25,16 @@
    row-gap: 30px;
    place-items: center;
 }
+.content-sec .check{
+   color: #fff;
+   font-size: 14px;
+}
+.content-sec .check a{
+   color: rgba(240, 178, 4);
+}
+.content-sec .check a:hover{
+   color: rgba(240, 178, 4, .7);
+}
 .logo h1 {
    color: rgba(240, 178, 4);
    font-weight: 400;
