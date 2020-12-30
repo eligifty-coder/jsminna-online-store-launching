@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function(){
                <p>${item.reason}</p>
                </div>`
             })
-            console.log(suggestedItem)
             content.innerHTML=html
          }
       }catch(e){
