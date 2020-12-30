@@ -43,7 +43,7 @@ myform.onsubmit= async function(e){
                btn.style.display = "none"
                btnCircle.style.display = "grid"
                localStorage.setItem("user", JSON.stringify(userIds))
-               self.location = "../login.html"
+               self.location = "./login.html"
             } else {
                error.style.display = 'grid'
                error.innerHTML = `<div>
